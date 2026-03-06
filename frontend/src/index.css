@@ -1,0 +1,28 @@
+
+
+
+@import "tailwindcss";
+
+@keyframes border-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.animate-border-glow {
+  animation: border-glow 3s infinite;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", "Outfit", sans-serif;
+}
+
+html {
+  transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light mode background gradient */
+body {
+  @apply bg-[#f8fafc] dark:bg-[#020617] text-slate-900 dark:text-slate-200;
+}
+
