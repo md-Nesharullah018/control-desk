@@ -21,6 +21,9 @@ export default function Register() {
 
     try {
       setLoading(true);
+
+      // const res = await axios.post("https://control-desk-backend.vercel.app/api/auth/register", form);
+
       const res = await axios.post("http://localhost:5000/api/auth/register", form);
       toast.success(res.data.message || "Account created successfully! 🎉");
       
